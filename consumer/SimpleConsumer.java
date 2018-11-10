@@ -1,3 +1,4 @@
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
@@ -9,15 +10,16 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
 public class SimpleConsumer {
-	KafkaConsumer <String, String> consumer;
+	KafkaConsumer <String, Data> consumer;
+	
 
 	SimpleConsumer (){
 		Properties props = new Properties();
 		props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
 		props.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "Group1");
 		props.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class.getName());
-		props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class.getName());
-		
+		//props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,UserDeserializer.class.getName());		
+		props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"UserDeserializer");	
 		consumer = new KafkaConsumer<>(props);
 	}
 	
@@ -27,10 +29,11 @@ public class SimpleConsumer {
 	
 	void consume() {
 		while (true) {
-			ConsumerRecords<String, String> records = consumer.poll(100);
-			for (ConsumerRecord<String, String> record : records) { 
+			ConsumerRecords<String, Data> records = consumer.poll(100);
+			for (ConsumerRecord<String, Data> record : records) { 
 				System.out.println("something consumed");
-				System.out.printf("offset = %d, key = %s, key = %s, value = %s%n",
+				System.out.println("Received "+record.value().getName());
+				System.out.printf("offset = %d, key = %s, partition = %s, value = %s%n",
 				record.offset(), record.key(), record.partition(), record.value());
 			}//for
 		} //while
@@ -47,7 +50,7 @@ public class SimpleConsumer {
 //		System.setProperty("kafka.logs.dir", "/home/aron/Desktop/kafka/logs");
 //		System.getProperties().list(System.out);
 
-		List <String> topics = Arrays.asList("SDTF");
+		List <String> topics = Arrays.asList("SDTF2");
 		
 		SimpleConsumer myConsumer = new SimpleConsumer();
 		
@@ -56,6 +59,5 @@ public class SimpleConsumer {
 		myConsumer.stop();
 
 	}
-
 
 }

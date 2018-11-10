@@ -1,0 +1,962 @@
+<?xml version='1.0' encoding='ISO-8859-15'?>
+<root>
+  <elaborado>2018-11-09T16:00:00</elaborado>
+  <validez_ini>2018-11-09T00:00:00</validez_ini>
+  <validez_fin>2018-11-10T00:00:00</validez_fin>
+  <ccaa id="and" nombre="ANDALUCÃA">
+    <provincia ccaa="and" id="21" nombre="HUELVA">
+      <ciudad capital="0" cod_ine="21005" cod_ine_m="21005" nombre="Almonte">
+        <tmax>18</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="21042" cod_ine_m="21042" nombre="Isla Cristina">
+        <tmax>18</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="21072" cod_ine_m="21072" nombre="Valverde del Camino">
+        <tmax>17</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="21041" cod_ine_m="21041" nombre="Huelva">
+        <tmax>18</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="and" id="11" nombre="CÁDIZ">
+      <ciudad capital="0" cod_ine="11004" cod_ine_m="11004" nombre="Algeciras">
+        <tmax>18</tmax>
+        <tmin>13</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="11012" cod_ine_m="11012" nombre="Cádiz">
+        <tmax>18</tmax>
+        <tmin>12</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="11020" cod_ine_m="11020" nombre="Jerez de la Frontera">
+        <tmax>17</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="and" id="14" nombre="CÓRDOBA">
+      <ciudad capital="0" cod_ine="14054" cod_ine_m="14054" nombre="Pozoblanco">
+        <tmax>12</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="14055" cod_ine_m="14055" nombre="Priego de Córdoba">
+        <tmax>12</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="14038" cod_ine_m="14038" nombre="Lucena">
+        <tmax>13</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="14021" cod_ine_m="14021" nombre="Córdoba">
+        <tmax>17</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="and" id="41" nombre="SEVILLA">
+      <ciudad capital="0" cod_ine="41053" cod_ine_m="41053" nombre="Lebrija">
+        <tmax>18</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="41039" cod_ine_m="41039" nombre="Écija">
+        <tmax>16</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="41065" cod_ine_m="41065" nombre="Morón de la Frontera">
+        <tmax>16</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="41091" cod_ine_m="41091" nombre="Sevilla">
+        <tmax>18</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="and" id="29" nombre="MÁLAGA">
+      <ciudad capital="1" cod_ine="29067" cod_ine_m="29067" nombre="Málaga">
+        <tmax>19</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="29069" cod_ine_m="29069" nombre="Marbella">
+        <tmax>20</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="29094" cod_ine_m="29094" nombre="Vélez-Málaga">
+        <tmax>20</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="29084" cod_ine_m="29084" nombre="Ronda">
+        <tmax>12</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="29015" cod_ine_m="29015" nombre="Antequera">
+        <tmax>14</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="and" id="23" nombre="JAÉN">
+      <ciudad capital="0" cod_ine="23005" cod_ine_m="23005" nombre="Andújar">
+        <tmax>16</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="23028" cod_ine_m="23028" nombre="Cazorla">
+        <tmax>9</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="23055" cod_ine_m="23055" nombre="Linares">
+        <tmax>12</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="23002" cod_ine_m="23002" nombre="Alcalá la Real">
+        <tmax>9</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="23050" cod_ine_m="23050" nombre="Jaén">
+        <tmax>12</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="and" id="18" nombre="GRANADA">
+      <ciudad capital="0" cod_ine="18023" cod_ine_m="18023" nombre="Baza">
+        <tmax>11</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="18122" cod_ine_m="18122" nombre="Loja">
+        <tmax>14</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="18140" cod_ine_m="18140" nombre="Motril">
+        <tmax>21</tmax>
+        <tmin>13</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="18087" cod_ine_m="18087" nombre="Granada">
+        <tmax>15</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="and" id="04" nombre="ALMERÍA">
+      <ciudad capital="1" cod_ine="04013" cod_ine_m="04013" nombre="Almería">
+        <tmax>19</tmax>
+        <tmin>13</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="04053" cod_ine_m="04053" nombre="Huércal-Overa">
+        <tmax>17</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="arn" nombre="ARAGÃN">
+    <provincia ccaa="arn" id="22" nombre="HUESCA">
+      <ciudad capital="0" cod_ine="22130" cod_ine_m="22130" nombre="Jaca">
+        <tmax>12</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="22213" cod_ine_m="22213" nombre="Sariñena">
+        <tmax>16</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="22125" cod_ine_m="22125" nombre="Huesca">
+        <tmax>16</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="22112" cod_ine_m="22112" nombre="Fraga">
+        <tmax>19</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="22054" cod_ine_m="22054" nombre="Benasque">
+        <tmax>10</tmax>
+        <tmin>0</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="arn" id="50" nombre="ZARAGOZA">
+      <ciudad capital="1" cod_ine="50297" cod_ine_m="50297" nombre="Zaragoza">
+        <tmax>16</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="50095" cod_ine_m="50095" nombre="Ejea de los Caballeros">
+        <tmax>15</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="50067" cod_ine_m="50067" nombre="Calatayud">
+        <tmax>13</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="50094" cod_ine_m="50094" nombre="Daroca">
+        <tmax>11</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="arn" id="44" nombre="TERUEL">
+      <ciudad capital="0" cod_ine="44155" cod_ine_m="44155" nombre="Montalbán">
+        <tmax>11</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="44050" cod_ine_m="44050" nombre="Calamocha">
+        <tmax>11</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="44013" cod_ine_m="44013" nombre="Alcañiz">
+        <tmax>15</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="44216" cod_ine_m="44216" nombre="Teruel">
+        <tmax>11</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="ast" nombre="PRINCIPADO DE ASTURIAS">
+    <provincia ccaa="ast" id="33" nombre="ASTURIAS">
+      <ciudad capital="0" cod_ine="33011" cod_ine_m="33011" nombre="Cangas del Narcea">
+        <tmax>15</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="33004" cod_ine_m="33004" nombre="Avilés">
+        <tmax>17</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="33036" cod_ine_m="33036" nombre="Llanes">
+        <tmax>16</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="33041" cod_ine_m="33041" nombre="Navia">
+        <tmax>17</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="33044" cod_ine_m="33044" nombre="Oviedo">
+        <tmax>16</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="33031" cod_ine_m="33031" nombre="Langreo">
+        <tmax>16</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="33024" cod_ine_m="33024" nombre="Gijón">
+        <tmax>18</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="bal" nombre="ILLES BALEARS">
+    <provincia ccaa="bal" id="071" nombre="Illes Balears (Menorca)">
+      <ciudad capital="0" cod_ine="07032" cod_ine_m="07032" nombre="Maó">
+        <tmax>18</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="07015" cod_ine_m="07015" nombre="Ciutadella de Menorca">
+        <tmax>18</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="bal" id="072" nombre="Illes Balears (Mallorca)">
+      <ciudad capital="1" cod_ine="07040" cod_ine_m="07040" nombre="Palma de Mallorca">
+        <tmax>17</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="07022" cod_ine_m="07022" nombre="Felanitx/Portocolom">
+        <tmax>18</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="07019" cod_ine_m="07019" nombre="Escorca/Lluc">
+        <tmax>14</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="07044" cod_ine_m="07044" nombre="Pobla. Sa">
+        <tmax>18</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="bal" id="073" nombre="Illes Balears (Ibiza-Formentera)">
+      <ciudad capital="0" cod_ine="07026" cod_ine_m="07026" nombre="Eivissa">
+        <tmax>17</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="coo" nombre="CANARIAS">
+    <provincia ccaa="coo" id="351" nombre="Las Palmas (Lanzarote)">
+      <ciudad capital="0" cod_ine="35004" cod_ine_m="35004" nombre="Arrecife">
+        <tmax>23</tmax>
+        <tmin>17</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="coo" id="352" nombre="Las Palmas (Fuerteventura)">
+      <ciudad capital="0" cod_ine="35017" cod_ine_m="35017" nombre="Puerto del Rosario">
+        <tmax>24</tmax>
+        <tmin>19</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="coo" id="353" nombre="Las Palmas (Gran Canaria)">
+      <ciudad capital="1" cod_ine="35016" cod_ine_m="35016" nombre="Palmas de Gran Canaria. Las">
+        <tmax>23</tmax>
+        <tmin>20</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="coo" id="381" nombre="Santa Cruz de Tenerife (Tenerife)">
+      <ciudad capital="1" cod_ine="38038" cod_ine_m="38038" nombre="Santa Cruz de Tenerife">
+        <tmax>25</tmax>
+        <tmin>19</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="coo" id="382" nombre="Santa Cruz de Tenerife (La Gomera)">
+      <ciudad capital="0" cod_ine="38036" cod_ine_m="38036" nombre="San Sebastián de la Gomera">
+        <tmax>24</tmax>
+        <tmin>19</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="coo" id="383" nombre="Santa Cruz de Tenerife (La Palma)">
+      <ciudad capital="0" cod_ine="38037" cod_ine_m="38037" nombre="Santa Cruz de la Palma">
+        <tmax>22</tmax>
+        <tmin>18</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="coo" id="384" nombre="Santa Cruz de Tenerife (El Hierro)">
+      <ciudad capital="0" cod_ine="38048" cod_ine_m="38048" nombre="Valverde">
+        <tmax>19</tmax>
+        <tmin>14</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="can" nombre="CANTABRIA">
+    <provincia ccaa="can" id="39" nombre="CANTABRIA">
+      <ciudad capital="0" cod_ine="39012" cod_ine_m="39012" nombre="Cabezón de la Sal">
+        <tmax>17</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="39080" cod_ine_m="39080" nombre="San Vicente de la Barquera">
+        <tmax>19</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="39075" cod_ine_m="39075" nombre="Santander">
+        <tmax>17</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="39020" cod_ine_m="39020" nombre="Castro-Urdiales">
+        <tmax>17</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="39055" cod_ine_m="39055" nombre="Potes">
+        <tmax>17</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="39059" cod_ine_m="39059" nombre="Reinosa">
+        <tmax>9</tmax>
+        <tmin>0</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="39087" cod_ine_m="39087" nombre="Torrelavega">
+        <tmax>17</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="cle" nombre="CASTILLA Y LEÃN">
+    <provincia ccaa="cle" id="24" nombre="LEÓN">
+      <ciudad capital="0" cod_ine="24115" cod_ine_m="24115" nombre="Ponferrada">
+        <tmax>11</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="24008" cod_ine_m="24008" nombre="Astorga">
+        <tmax>10</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="24089" cod_ine_m="24089" nombre="León">
+        <tmax>8</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="24202" cod_ine_m="24202" nombre="Villablino">
+        <tmax>8</tmax>
+        <tmin>1</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cle" id="34" nombre="PALENCIA">
+      <ciudad capital="0" cod_ine="34080" cod_ine_m="34080" nombre="Guardo">
+        <tmax>8</tmax>
+        <tmin>-1</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="34004" cod_ine_m="34004" nombre="Aguilar de Campoo">
+        <tmax>9</tmax>
+        <tmin>-1</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="34120" cod_ine_m="34120" nombre="Palencia">
+        <tmax>10</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cle" id="09" nombre="BURGOS">
+      <ciudad capital="0" cod_ine="09018" cod_ine_m="09018" nombre="Aranda de Duero">
+        <tmax>9</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="09219" cod_ine_m="09219" nombre="Miranda de Ebro">
+        <tmax>13</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="09059" cod_ine_m="09059" nombre="Burgos">
+        <tmax>9</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cle" id="49" nombre="ZAMORA">
+      <ciudad capital="0" cod_ine="49219" cod_ine_m="49219" nombre="Toro">
+        <tmax>12</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="49275" cod_ine_m="49275" nombre="Zamora">
+        <tmax>11</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="49021" cod_ine_m="49021" nombre="Benavente">
+        <tmax>9</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cle" id="47" nombre="VALLADOLID">
+      <ciudad capital="1" cod_ine="47186" cod_ine_m="47186" nombre="Valladolid">
+        <tmax>10</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="47114" cod_ine_m="47114" nombre="Peñafiel">
+        <tmax>10</tmax>
+        <tmin>1</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="47085" cod_ine_m="47085" nombre="Medina del Campo">
+        <tmax>10</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cle" id="42" nombre="SORIA">
+      <ciudad capital="0" cod_ine="42043" cod_ine_m="42043" nombre="Burgo de Osma-Ciudad de Osma">
+        <tmax>9</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="42173" cod_ine_m="42173" nombre="Soria">
+        <tmax>8</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="42020" cod_ine_m="42020" nombre="Almazán">
+        <tmax>9</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cle" id="37" nombre="SALAMANCA">
+      <ciudad capital="0" cod_ine="37046" cod_ine_m="37046" nombre="Béjar">
+        <tmax>11</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="37107" cod_ine_m="37107" nombre="Ciudad Rodrigo">
+        <tmax>12</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="37274" cod_ine_m="37274" nombre="Salamanca">
+        <tmax>11</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cle" id="05" nombre="ÁVILA">
+      <ciudad capital="0" cod_ine="05014" cod_ine_m="05014" nombre="Arenas de San Pedro">
+        <tmax>16</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="05016" cod_ine_m="05016" nombre="Arévalo">
+        <tmax>11</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="05019" cod_ine_m="05019" nombre="Ávila">
+        <tmax>10</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cle" id="40" nombre="SEGOVIA">
+      <ciudad capital="0" cod_ine="40170" cod_ine_m="40170" nombre="Riaza">
+        <tmax>7</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="40063" cod_ine_m="40063" nombre="Cuéllar">
+        <tmax>10</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="40194" cod_ine_m="40194" nombre="Segovia">
+        <tmax>9</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="clm" nombre="CASTILLA - LA MANCHA">
+    <provincia ccaa="clm" id="45" nombre="TOLEDO">
+      <ciudad capital="0" cod_ine="45081" cod_ine_m="45081" nombre="Illescas">
+        <tmax>12</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="45168" cod_ine_m="45168" nombre="Toledo">
+        <tmax>13</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="45121" cod_ine_m="45121" nombre="Ocaña">
+        <tmax>10</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="45165" cod_ine_m="45165" nombre="Talavera de la Reina">
+        <tmax>13</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="45142" cod_ine_m="45142" nombre="Quintanar de la Orden">
+        <tmax>12</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="clm" id="13" nombre="CIUDAD REAL">
+      <ciudad capital="0" cod_ine="13071" cod_ine_m="13071" nombre="Puertollano">
+        <tmax>10</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="13034" cod_ine_m="13034" nombre="Ciudad Real">
+        <tmax>10</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="13087" cod_ine_m="13087" nombre="Valdepeñas">
+        <tmax>10</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="13082" cod_ine_m="13082" nombre="Tomelloso">
+        <tmax>10</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="clm" id="19" nombre="GUADALAJARA">
+      <ciudad capital="1" cod_ine="19130" cod_ine_m="19130" nombre="Guadalajara">
+        <tmax>12</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="19190" cod_ine_m="19190" nombre="Molina de Aragón">
+        <tmax>10</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="19257" cod_ine_m="19257" nombre="Sigüenza">
+        <tmax>10</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="clm" id="16" nombre="CUENCA">
+      <ciudad capital="0" cod_ine="16112" cod_ine_m="16112" nombre="Huete">
+        <tmax>11</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="16078" cod_ine_m="16078" nombre="Cuenca">
+        <tmax>10</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="16203" cod_ine_m="16203" nombre="Tarancón">
+        <tmax>11</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="16175" cod_ine_m="16175" nombre="Quintanar del Rey">
+        <tmax>11</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="clm" id="02" nombre="ALBACETE">
+      <ciudad capital="0" cod_ine="02009" cod_ine_m="02009" nombre="Almansa">
+        <tmax>11</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="02003" cod_ine_m="02003" nombre="Albacete">
+        <tmax>11</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="02037" cod_ine_m="02037" nombre="Hellín">
+        <tmax>15</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="02081" cod_ine_m="02081" nombre="Villarrobledo">
+        <tmax>12</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="cat" nombre="CATALUÃA">
+    <provincia ccaa="cat" id="08" nombre="BARCELONA">
+      <ciudad capital="0" cod_ine="08298" cod_ine_m="08298" nombre="Vic">
+        <tmax>17</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="08121" cod_ine_m="08121" nombre="Mataró">
+        <tmax>19</tmax>
+        <tmin>12</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="08102" cod_ine_m="08102" nombre="Igualada">
+        <tmax>18</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="08307" cod_ine_m="08307" nombre="Vilanova i la Geltrú">
+        <tmax>20</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="08113" cod_ine_m="08113" nombre="Manresa">
+        <tmax>18</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="08187" cod_ine_m="08187" nombre="Sabadell">
+        <tmax>19</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="08019" cod_ine_m="08019" nombre="Barcelona">
+        <tmax>19</tmax>
+        <tmin>13</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cat" id="43" nombre="TARRAGONA">
+      <ciudad capital="0" cod_ine="43163" cod_ine_m="43163" nombre="Vendrell. El">
+        <tmax>19</tmax>
+        <tmin>12</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="43064" cod_ine_m="43064" nombre="Gandesa">
+        <tmax>15</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="43155" cod_ine_m="43155" nombre="Tortosa">
+        <tmax>19</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="43148" cod_ine_m="43148" nombre="Tarragona">
+        <tmax>20</tmax>
+        <tmin>12</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="43123" cod_ine_m="43123" nombre="Reus">
+        <tmax>18</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cat" id="25" nombre="LLEIDA">
+      <ciudad capital="0" cod_ine="25040" cod_ine_m="25040" nombre="Balaguer">
+        <tmax>19</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="25217" cod_ine_m="25217" nombre="Tàrrega">
+        <tmax>16</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="25203" cod_ine_m="25203" nombre="La Seu d'Urgell">
+        <tmax>14</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="25243" cod_ine_m="25243" nombre="Vielha e Mijaran">
+        <tmax>11</tmax>
+        <tmin>1</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="25120" cod_ine_m="25120" nombre="Lleida">
+        <tmax>19</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="cat" id="17" nombre="GIRONA">
+      <ciudad capital="0" cod_ine="17147" cod_ine_m="17147" nombre="Ripoll">
+        <tmax>15</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="17114" cod_ine_m="17114" nombre="Olot">
+        <tmax>18</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="17023" cod_ine_m="17023" nombre="Blanes">
+        <tmax>20</tmax>
+        <tmin>12</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="17066" cod_ine_m="17066" nombre="Figueres">
+        <tmax>18</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="17079" cod_ine_m="17079" nombre="Girona">
+        <tmax>20</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="ext" nombre="EXTREMADURA">
+    <provincia ccaa="ext" id="10" nombre="CÁCERES">
+      <ciudad capital="1" cod_ine="10037" cod_ine_m="10037" nombre="Cáceres">
+        <tmax>14</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="10131" cod_ine_m="10131" nombre="Navalmoral de la Mata">
+        <tmax>14</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="10148" cod_ine_m="10148" nombre="Plasencia">
+        <tmax>12</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="10195" cod_ine_m="10195" nombre="Trujillo">
+        <tmax>13</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="ext" id="06" nombre="BADAJOZ">
+      <ciudad capital="1" cod_ine="06015" cod_ine_m="06015" nombre="Badajoz">
+        <tmax>17</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="06158" cod_ine_m="06158" nombre="Zafra">
+        <tmax>15</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="06074" cod_ine_m="06074" nombre="Llerena">
+        <tmax>14</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="06083" cod_ine_m="06083" nombre="Mérida">
+        <tmax>18</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="gal" nombre="GALICIA">
+    <provincia ccaa="gal" id="15" nombre="A CORUÑA">
+      <ciudad capital="1" cod_ine="15030" cod_ine_m="15030" nombre="A Coruña">
+        <tmax>18</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="15078" cod_ine_m="15078" nombre="Santiago de Compostela">
+        <tmax>15</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="gal" id="27" nombre="LUGO">
+      <ciudad capital="0" cod_ine="27066" cod_ine_m="27066" nombre="Viveiro">
+        <tmax>17</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="27028" cod_ine_m="27028" nombre="Lugo">
+        <tmax>14</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="27031" cod_ine_m="27031" nombre="Monforte de Lemos">
+        <tmax>16</tmax>
+        <tmin>3</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="gal" id="36" nombre="PONTEVEDRA">
+      <ciudad capital="1" cod_ine="36038" cod_ine_m="36038" nombre="Pontevedra">
+        <tmax>16</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="36057" cod_ine_m="36057" nombre="Vigo">
+        <tmax>16</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="gal" id="32" nombre="OURENSE">
+      <ciudad capital="0" cod_ine="32085" cod_ine_m="32085" nombre="Verín">
+        <tmax>14</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="32054" cod_ine_m="32054" nombre="Ourense">
+        <tmax>17</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="mad" nombre="COMUNIDAD DE MADRID">
+    <provincia ccaa="mad" id="28" nombre="MADRID">
+      <ciudad capital="1" cod_ine="28079" cod_ine_m="28079" nombre="Madrid">
+        <tmax>13</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="28005" cod_ine_m="28005" nombre="Alcalá de Henares">
+        <tmax>14</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="28065" cod_ine_m="28065" nombre="Getafe">
+        <tmax>13</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="28047" cod_ine_m="28047" nombre="Collado Villalba">
+        <tmax>11</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="28096" cod_ine_m="28096" nombre="Navalcarnero">
+        <tmax>12</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="28013" cod_ine_m="28013" nombre="Aranjuez">
+        <tmax>13</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="mur" nombre="REGIÃN DE MURCIA">
+    <provincia ccaa="mur" id="30" nombre="MURCIA">
+      <ciudad capital="0" cod_ine="30016" cod_ine_m="30016" nombre="Cartagena">
+        <tmax>19</tmax>
+        <tmin>12</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="30015" cod_ine_m="30015" nombre="Caravaca de la Cruz">
+        <tmax>14</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="30024" cod_ine_m="30024" nombre="Lorca">
+        <tmax>16</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="30043" cod_ine_m="30043" nombre="Yecla">
+        <tmax>13</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="30030" cod_ine_m="30030" nombre="Murcia">
+        <tmax>20</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="nav" nombre="COMUNIDAD FORAL DE NAVARRA">
+    <provincia ccaa="nav" id="31" nombre="NAVARRA">
+      <ciudad capital="0" cod_ine="31097" cod_ine_m="31097" nombre="Estella-Lizarra">
+        <tmax>14</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="31201" cod_ine_m="31201" nombre="Pamplona/Iruña">
+        <tmax>14</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="31210" cod_ine_m="31210" nombre="Roncal/Erronkari">
+        <tmax>12</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="31232" cod_ine_m="31232" nombre="Tudela">
+        <tmax>15</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="pva" nombre="PAÃS VASCO">
+    <provincia ccaa="pva" id="48" nombre="BIZKAIA">
+      <ciudad capital="1" cod_ine="48020" cod_ine_m="48020" nombre="Bilbao">
+        <tmax>17</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="48027" cod_ine_m="48027" nombre="Durango">
+        <tmax>16</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="48090" cod_ine_m="48090" nombre="Balmaseda">
+        <tmax>15</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="pva" id="20" nombre="GIPUZKOA">
+      <ciudad capital="1" cod_ine="20069" cod_ine_m="20069" nombre="Donostia/San Sebastián">
+        <tmax>17</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="20030" cod_ine_m="20030" nombre="Eibar">
+        <tmax>16</tmax>
+        <tmin>8</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="pva" id="01" nombre="ARABA/ÁLAVA">
+      <ciudad capital="1" cod_ine="01059" cod_ine_m="01059" nombre="Vitoria-Gasteiz">
+        <tmax>12</tmax>
+        <tmin>2</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="01031" cod_ine_m="01031" nombre="Laguardia">
+        <tmax>13</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="01036" cod_ine_m="01036" nombre="Laudio/Llodio">
+        <tmax>16</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="rio" nombre="LA RIOJA">
+    <provincia ccaa="rio" id="26" nombre="LA RIOJA">
+      <ciudad capital="0" cod_ine="26071" cod_ine_m="26071" nombre="Haro">
+        <tmax>13</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="26036" cod_ine_m="26036" nombre="Calahorra">
+        <tmax>16</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="26089" cod_ine_m="26089" nombre="Logroño">
+        <tmax>15</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="val" nombre="COMUNIDAD VALENCIANA">
+    <provincia ccaa="val" id="12" nombre="CASTELLÓ/CASTELLÓN">
+      <ciudad capital="0" cod_ine="12126" cod_ine_m="12126" nombre="Vall d'Uixó. la">
+        <tmax>19</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="12138" cod_ine_m="12138" nombre="Vinaròs">
+        <tmax>20</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="12040" cod_ine_m="12040" nombre="Castellón de la Plana/Castelló de la Plana">
+        <tmax>19</tmax>
+        <tmin>9</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="12080" cod_ine_m="12080" nombre="Morella">
+        <tmax>12</tmax>
+        <tmin>4</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="val" id="46" nombre="VALÈNCIA/VALENCIA">
+      <ciudad capital="0" cod_ine="46213" cod_ine_m="46213" nombre="Requena">
+        <tmax>12</tmax>
+        <tmin>5</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="46184" cod_ine_m="46184" nombre="Ontinyent">
+        <tmax>15</tmax>
+        <tmin>7</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="46131" cod_ine_m="46131" nombre="Gandia">
+        <tmax>18</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="1" cod_ine="46250" cod_ine_m="46250" nombre="Valencia">
+        <tmax>19</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+    </provincia>
+    <provincia ccaa="val" id="03" nombre="ALACANT/ALICANTE">
+      <ciudad capital="1" cod_ine="03014" cod_ine_m="03014" nombre="Alicante/Alacant">
+        <tmax>19</tmax>
+        <tmin>11</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="03099" cod_ine_m="03099" nombre="Orihuela">
+        <tmax>18</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="03063" cod_ine_m="03063" nombre="Dénia">
+        <tmax>19</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="03065" cod_ine_m="03065" nombre="Elche/Elx">
+        <tmax>18</tmax>
+        <tmin>10</tmin>
+      </ciudad>
+      <ciudad capital="0" cod_ine="03009" cod_ine_m="03009" nombre="Alcoy/Alcoi">
+        <tmax>14</tmax>
+        <tmin>6</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="ceu" nombre="CEUTA">
+    <provincia ccaa="ceu" id="51" nombre="CEUTA">
+      <ciudad capital="1" cod_ine="51001" cod_ine_m="51001" nombre="Ceuta">
+        <tmax>18</tmax>
+        <tmin>15</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+  <ccaa id="mel" nombre="MELILLA">
+    <provincia ccaa="mel" id="52" nombre="MELILLA">
+      <ciudad capital="1" cod_ine="52001" cod_ine_m="52001" nombre="Melilla">
+        <tmax>19</tmax>
+        <tmin>15</tmin>
+      </ciudad>
+    </provincia>
+  </ccaa>
+</root>
