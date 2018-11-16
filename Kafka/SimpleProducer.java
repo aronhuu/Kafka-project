@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.List;
 import java.util.Properties;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -24,7 +25,7 @@ public class SimpleProducer {
 	final static int NUM_CITIES = 200;
 
 	Properties props;
-	String [] ccaas;
+	List<String> ccaas;
 	String [] cities = new String[NUM_CITIES];
 	String [] tempMax = new String[NUM_CITIES];
 	String [] tempMin = new String[NUM_CITIES];
@@ -35,8 +36,8 @@ public class SimpleProducer {
 	KafkaProducer<String, Weather> producer;
 	
 	
-	SimpleProducer(String [] ccaas) {
-		this.ccaas=ccaas;
+	SimpleProducer(List<String> topic_ccaas) {
+		this.ccaas=topic_ccaas;
 		Properties props = new Properties();
 		props.put("bootstrap.servers", "localhost:9092");
 		// Serializer for conversion the key type to bytes
@@ -44,24 +45,6 @@ public class SimpleProducer {
 		// Serializer for conversion the value type to bytes
 		props.put("value.serializer", "UserSerializer");
 		producer = new KafkaProducer<>(props);
-	}
-	
-	void produceAndPrint() {
-		
-		parser();
-//		for (int i = 0; i < cities.length; i++) {
-//		// Fire-and-forget send(topic, key, value)
-//		// Send adds records to unsent records buffer and return
-//		System.out.println(cities[i]);
-//		producer.send(new ProducerRecord<String, Weather>("TEMPERATURES", "temperature-max", cities[i] + "_" +tempMax[i] ));
-//		}
-//		
-//		for (int i = 0; i < cities.length; i++) {
-//			// Fire-and-forget send(topic, key, value)
-//			// Send adds records to unsent records buffer and return
-//			System.out.println(cities[i]);
-//			producer.send(new ProducerRecord<String, Weather>("TEMPERATURES", "temperature-min", cities[i] + "_" +tempMin[i] ));
-//			}
 	}
 	
 	
@@ -72,11 +55,11 @@ public class SimpleProducer {
 	}
 	
 	
-	void parser() {
-		int counter=0;
+	void produceAndPrint() {
 		String contentType = "";
 		HttpURLConnection urlConnection = null;
-		
+		double sum=0;
+		int counter=0;
 		try {
 			
 			//NEW
@@ -101,7 +84,7 @@ public class SimpleProducer {
 //		         doc.getDocumentElement().normalize();
 //		         System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 	            
-				 for (int l = 0; l<ccaas.length;l++){
+				 for (int l = 0; l<ccaas.size();l++){
 		         NodeList ccaaList = doc.getElementsByTagName("ccaa");
 		         //System.out.println("----------------------------");
 		         
@@ -109,7 +92,7 @@ public class SimpleProducer {
 		        	 Element ccaa = (Element) ccaaList.item(i);
 					//System.out.println("\nCOMUNIDAD AUT�NOMA: " + ccaa.getAttribute("nombre"));
 		        	 	String wCcaa=ccaa.getAttribute("nombre").trim();
-						 if(wCcaa.replace(" ","_").equals(ccaas[l])){
+						 if(wCcaa.replace(" ","_").equals(ccaas.get(l))){
 							System.out.println("\nCOMUNIDAD AUT�NOMA: " + ccaa.getAttribute("nombre"));
 
 							//System.out.println("\nCOMUNIDAD AUT�NOMA: " + ccaa.getAttribute("nombre"));
@@ -123,8 +106,10 @@ public class SimpleProducer {
 								String wProvince=provincia.getAttribute("nombre");
 								//Entrar a ciudades
 								 NodeList ciudadesList = provincia.getElementsByTagName("ciudad");
-								
+								 counter=0;
+
 								 for(int k = 0; k < ciudadesList.getLength() ; k++) {
+
 									Element ciudad = (Element) ciudadesList.item(k);
 									//System.out.println("\n>>>CIUDAD: " + ciudad.getAttribute("nombre"));
 									cities[counter] = ciudad.getAttribute("nombre");
@@ -148,16 +133,17 @@ public class SimpleProducer {
 									counter++;
 									
 									//producer send record
-									producer.send(new ProducerRecord<String, Weather>(ccaas[l],Integer.toString(counter), new Weather(ccaas[l],wProvince,wCity,wTmax,wTmin)));
+									producer.send(new ProducerRecord<String, Weather>(ccaas.get(l),Integer.toString(counter), new Weather(ccaas.get(l),wProvince,wCity,wTmax,wTmin)));
 									System.out.println(wCcaa+":"+wProvince+":"+wCity+":"+wTmax+":"+ wTmin);
 									
 								 }//for
+								 sum+=counter;
 							}//for province
 		                }//if 
 					 }
-					producer.send(new ProducerRecord<String, Weather>(ccaas[l],Integer.toString(counter+1), new Weather("","","",0,0)));
-				}
-				 
+				 }
+				producer.send(new ProducerRecord<String, Weather>(ccaas.get(ccaas.size()-1),Integer.toString(counter+1), new Weather("","","",sum,0)));
+
 			 }
 	      	} catch (Exception e) {
 	         e.printStackTrace();

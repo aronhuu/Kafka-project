@@ -30,7 +30,7 @@ public class SimpleConsumer implements Runnable{
 	
 	void subscribeAndConsume() {
 		consumer.subscribe(topics);
-		long start=System.currentTimeMillis();
+//		double start=System.currentTimeMillis();
 		while (true) {
 			ConsumerRecords<String, Weather> records = consumer.poll(100);
 			for (ConsumerRecord<String, Weather> record : records) { 
@@ -41,9 +41,12 @@ public class SimpleConsumer implements Runnable{
 				System.out.println("Received "+w.getCity()+":"+w.getMax()+"-"+w.getMin());
 				System.out.printf("offset = %d, key = %s, partition = %s, value = %s%n",
 				record.offset(), record.key(), record.partition(), record.value());
-				if(w.getCity().isEmpty())
-					System.out.println(Integer.parseInt(record.key())*1000/(System.currentTimeMillis()-start));
-				else {
+				if(w.getCity().isEmpty()) {
+//					double stop =System.currentTimeMillis()-start;
+					kafka_system.lastRecord(record.topic(),record.value().getMax(),System.currentTimeMillis());
+					
+				
+				}else {
 					for (int i=0; i<topics.size(); i++) {
 						if(w.getCcaa().equals(topics.get(i))) {
 							database[i].setValue(w.getMax(), "Maximum temperature", w.getCity());
