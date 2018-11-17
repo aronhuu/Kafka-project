@@ -1,5 +1,4 @@
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
@@ -10,22 +9,21 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-import kafka.security.auth.Topic;
-
 public class SimpleConsumer implements Runnable{
 	KafkaConsumer <String, Weather> consumer;
 	List <String> topics;
-	DefaultCategoryDataset[] database;
+	List <DefaultCategoryDataset> database;
+	boolean COMMENT =false;
 
-	SimpleConsumer (List <String> topics, DefaultCategoryDataset [] database){
+	SimpleConsumer (List<String> topic_name, List <DefaultCategoryDataset> data){
 		Properties props = new Properties();
-		this.database=database;
+		this.database=data;
 		props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
 		props.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "Group1");
 		props.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class.getName());
 		props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"UserDeserializer");	
 		consumer = new KafkaConsumer<>(props);
-		this.topics= topics;
+		this.topics= topic_name;
 	}
 	
 	void subscribeAndConsume() {
@@ -34,25 +32,29 @@ public class SimpleConsumer implements Runnable{
 		while (true) {
 			ConsumerRecords<String, Weather> records = consumer.poll(100);
 			for (ConsumerRecord<String, Weather> record : records) { 
-				System.out.println("something consumed");
-				long threadID = Thread.currentThread().getId();
-				System.out.println("->I AM THE THE THREAD N: " + threadID);
 				Weather w = record.value();
-				System.out.println("Received "+w.getCity()+":"+w.getMax()+"-"+w.getMin());
-				System.out.printf("offset = %d, key = %s, partition = %s, value = %s%n",
-				record.offset(), record.key(), record.partition(), record.value());
+				if(COMMENT) {
+					System.out.println("something consumed");
+					long threadID = Thread.currentThread().getId();
+					System.out.println("->I AM THE THE THREAD N: " + threadID);
+					System.out.println("Received "+w.getCity()+":"+w.getMax()+"-"+w.getMin());
+					System.out.printf("offset = %d, key = %s, partition = %s, value = %s%n",
+							record.offset(), record.key(), record.partition(), record.value());
+				}
 				if(w.getCity().isEmpty()) {
 //					double stop =System.currentTimeMillis()-start;
 					kafka_system.lastRecord(record.topic(),record.value().getMax(),System.currentTimeMillis());
 					
 				
 				}else {
-					for (int i=0; i<topics.size(); i++) {
-						if(w.getCcaa().equals(topics.get(i))) {
-							database[i].setValue(w.getMax(), "Maximum temperature", w.getCity());
-							database[i].setValue(w.getMin(), "Minimum temperature", w.getCity());			
+					if(database!=null)
+						for (int i=0; i<topics.size() ; i++) {
+							if(w.getCcaa().equals(topics.get(i))) {
+//						if(w.getCcaa().equals(topics)) {
+								database.get(i).setValue(w.getMax(), "Maximum temperature", w.getCity());
+								database.get(i).setValue(w.getMin(), "Minimum temperature", w.getCity());			
+							}
 						}
-					}
 					
 				}
 

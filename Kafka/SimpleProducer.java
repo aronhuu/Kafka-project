@@ -29,6 +29,7 @@ public class SimpleProducer {
 	String [] cities = new String[NUM_CITIES];
 	String [] tempMax = new String[NUM_CITIES];
 	String [] tempMin = new String[NUM_CITIES];
+	boolean COMMENT = false;
 	
 	
 	// The producer is a Kafka client that publishes records to the Kafka
@@ -62,27 +63,27 @@ public class SimpleProducer {
 		int counter=0;
 		try {
 			
-			//NEW
-			URL url = new URL ("http://www.aemet.es/xml/ccaa/"+new SimpleDateFormat("yyyyMMdd").format(new Date())+"_t_prev_esp.xml");
-			urlConnection = (HttpURLConnection)url.openConnection();
-			contentType = urlConnection.getContentType();
-			InputStream is = urlConnection.getInputStream();
+//			//NEW
+//			URL url = new URL ("http://www.aemet.es/xml/ccaa/"+new SimpleDateFormat("yyyyMMdd").format(new Date())+"_t_prev_esp.xml");
+//			urlConnection = (HttpURLConnection)url.openConnection();
+//			contentType = urlConnection.getContentType();
+//			InputStream is = urlConnection.getInputStream();
 			
-			if (contentType.contains("xml")) {
-				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	            factory.setExpandEntityReferences(false);
-	            factory.setIgnoringComments(true);
-	            factory.setIgnoringElementContentWhitespace(true);
-	            DocumentBuilder builder = factory.newDocumentBuilder();
-	            Document doc = builder.parse(is);
-//	            if(true) {
-//				//OLD
-//		         File inputFile = new File("20181109_t_prev_esp.xml");
-//		         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-//		         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-//		         Document doc = dBuilder.parse(inputFile);
-//		         doc.getDocumentElement().normalize();
-//		         System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+//			if (contentType.contains("xml")) {
+//				DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+//	            factory.setExpandEntityReferences(false);
+//	            factory.setIgnoringComments(true);
+//	            factory.setIgnoringElementContentWhitespace(true);
+//	            DocumentBuilder builder = factory.newDocumentBuilder();
+//	            Document doc = builder.parse(is);
+	            if(true) {
+				//OLD
+		         File inputFile = new File("20181109_t_prev_esp.xml");
+		         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		         Document doc = dBuilder.parse(inputFile);
+		         doc.getDocumentElement().normalize();
+		         System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 	            
 				 for (int l = 0; l<ccaas.size();l++){
 		         NodeList ccaaList = doc.getElementsByTagName("ccaa");
@@ -92,21 +93,22 @@ public class SimpleProducer {
 		        	 Element ccaa = (Element) ccaaList.item(i);
 					//System.out.println("\nCOMUNIDAD AUT�NOMA: " + ccaa.getAttribute("nombre"));
 		        	 	String wCcaa=ccaa.getAttribute("nombre").trim();
-						 if(wCcaa.replace(" ","_").equals(ccaas.get(l))){
+//						 if(wCcaa.replace(" ","_").equals(ccaas.get(l))){
+		        	 	if(ccaa.getAttribute("id").trim().equals(ccaas.get(l).split(",")[1])){
 							System.out.println("\nCOMUNIDAD AUT�NOMA: " + ccaa.getAttribute("nombre"));
 
 							//System.out.println("\nCOMUNIDAD AUT�NOMA: " + ccaa.getAttribute("nombre"));
 						 
 							//Entrar a las provincias
 							NodeList provinceList = ccaa.getElementsByTagName("provincia");
-							
+							counter=0;
+
 							for (int j = 0; j < provinceList.getLength(); j++) {
 								Element provincia = (Element) provinceList.item(j);
 								//System.out.println("\n*PROVINCIA: " + provincia.getAttribute("nombre"));
 								String wProvince=provincia.getAttribute("nombre");
 								//Entrar a ciudades
 								 NodeList ciudadesList = provincia.getElementsByTagName("ciudad");
-								 counter=0;
 
 								 for(int k = 0; k < ciudadesList.getLength() ; k++) {
 
@@ -131,18 +133,20 @@ public class SimpleProducer {
 									double wTmin= Double.parseDouble(tmin.getTextContent().trim());
 
 									counter++;
-									
+
 									//producer send record
-									producer.send(new ProducerRecord<String, Weather>(ccaas.get(l),Integer.toString(counter), new Weather(ccaas.get(l),wProvince,wCity,wTmax,wTmin)));
-									System.out.println(wCcaa+":"+wProvince+":"+wCity+":"+wTmax+":"+ wTmin);
+									producer.send(new ProducerRecord<String, Weather>(ccaas.get(l).split(",")[0],Integer.toString(counter), new Weather(ccaas.get(l).split(",")[0],wProvince,wCity,wTmax,wTmin)));
 									
+									if(COMMENT)
+										System.out.println(wCcaa+":"+wProvince+":"+wCity+":"+wTmax+":"+ wTmin);
+
 								 }//for
-								 sum+=counter;
 							}//for province
+							 sum+=counter;
 		                }//if 
 					 }
 				 }
-				producer.send(new ProducerRecord<String, Weather>(ccaas.get(ccaas.size()-1),Integer.toString(counter+1), new Weather("","","",sum,0)));
+				producer.send(new ProducerRecord<String, Weather>(ccaas.get(ccaas.size()-1).split(",")[0],Integer.toString(counter+1), new Weather("","","",sum,0)));
 
 			 }
 	      	} catch (Exception e) {
