@@ -22,19 +22,21 @@ public class kafka_system {
 	final static int NUMBER_OF_THREADS = 2;	//Number of threads per consumer
 	final static boolean ALL = true;		//If all the ccaas' weather information are produced
 	final static boolean GRAPH = false;		//If showing the graph of temperatures
-	final static boolean SUBSCRIBE_ALL_TOPICS = false;		//If the consumer subscribes all the topics
+	final static boolean SUBSCRIBE_ALL_TOPICS = true;		//If the consumer subscribes all the topics
 	//The number of consumers depends on the NUMBER_OF_THREADS and the type of subscription
 	//If SUBSCRIBE_ALL_TOPICS is true, the consumer consumes all the topics
 	//	And the total number of consumers is NUMBER_OF_THREADS
 	//Otherwise, each consumer consumes 1 topic only													
 	//	The total number of consumers is NUMBER_OF_THREADS * NUMBER OF TOPICS
 
-	static double start;
+	private static double start;
+	private static BufferedReader buff;
+	private static boolean printedLastRecord = false;
 	public static void main(String[] args) {
 		
 		List <String> topic_name_id = null;
 		try {
-			 topic_name_id = readConfig("topic.conf", ALL);
+			 topic_name_id = readConfig("src/topic.conf", ALL);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -57,17 +59,17 @@ public class kafka_system {
 		if(SUBSCRIBE_ALL_TOPICS)
 			for (int i = 0; i < NUMBER_OF_THREADS ; i++) {
 				if(GRAPH)
-					executor.submit(new SimpleConsumer(topic_name,data));
+					executor.submit(new SimpleConsumer(topic_name,data,1));
 				else
-					executor.submit(new SimpleConsumer(topic_name,null));
+					executor.submit(new SimpleConsumer(topic_name,null,1));
 			}
 		else
 			for (int i = 0; i < NUMBER_OF_THREADS ; i++) {
 				for (int j=0; j<topic_name.size();j++)
 					if(GRAPH)
-						executor.submit(new SimpleConsumer(Arrays.asList(topic_name.get(j)),Arrays.asList(data.get(j))));
+						executor.submit(new SimpleConsumer(Arrays.asList(topic_name.get(j)),Arrays.asList(data.get(j)),j));
 					else
-						executor.submit(new SimpleConsumer(Arrays.asList(topic_name.get(j)),null));
+						executor.submit(new SimpleConsumer(Arrays.asList(topic_name.get(j)),null,j));
 
 			}
 
@@ -93,7 +95,7 @@ public class kafka_system {
 		String str;
 		List <String> topics= new ArrayList<String>();
 		FileReader file = new FileReader (path);
-		BufferedReader buff = new BufferedReader (file);
+		buff = new BufferedReader (file);
 		while((str = buff.readLine())!=null ) {
 			if(all){
 				String sCcaa=str.replace("#","").replace(" ", "_");
@@ -112,13 +114,14 @@ public class kafka_system {
 	}
 
 	public static void lastRecord(String topic, double msgs, double stop) {
-		// TODO Auto-generated method stub
-		double time =stop-start;
-		System.out.println("*********************************");
-//		System.out.println(topic);
-		System.out.printf("Data rate: %s records per %.3f s\n",msgs,time/1000);
-		System.out.printf("Data rate: %.3f msg/s\n",msgs*1000/(time));
-		System.out.println("*********************************");
+		if(!printedLastRecord) {
+			double time =stop-start;
+			System.out.println("*********************************");
+	//		System.out.println(topic);
+			System.out.printf("Data rate: %s records per %.3f s\n",msgs,time/1000);
+			System.out.printf("Data rate: %.3f msg/s\n",msgs*1000/(time));
+			System.out.println("*********************************");
+		}
 	}
 	
 }

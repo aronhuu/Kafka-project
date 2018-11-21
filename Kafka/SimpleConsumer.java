@@ -15,11 +15,11 @@ public class SimpleConsumer implements Runnable{
 	List <DefaultCategoryDataset> database;
 	boolean COMMENT =false;
 
-	SimpleConsumer (List<String> topic_name, List <DefaultCategoryDataset> data){
+	SimpleConsumer (List<String> topic_name, List <DefaultCategoryDataset> data, int group){
 		Properties props = new Properties();
 		this.database=data;
 		props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-		props.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "Group1");
+		props.setProperty(ConsumerConfig.GROUP_ID_CONFIG, "Group"+group);
 		props.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class.getName());
 		props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,"UserDeserializer");	
 		consumer = new KafkaConsumer<>(props);
